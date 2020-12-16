@@ -1,0 +1,71 @@
+@import "vars";
+@import "global";
+@import "fonts";
+
+.header {
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 25px 0px 15px;
+	}
+
+	&__contacts {
+		margin-left: auto;
+		margin-right: 25px;
+		font-size: 15px;
+		span {
+			color: $red;
+		}
+		a {
+			display: inline-block;
+			color: $text;
+			text-decoration: none;
+		}
+	}
+
+	&__lk {
+		font-size: 12px;
+		font-family: "Roboto-Regular", sans-serif;
+		border-radius: 4px;
+		max-width: 72px;
+		width: 100%;
+		text-align: center;
+		a {
+			color: #fff;
+			text-decoration: none;
+			padding: 12px 10px;
+		}
+	}
+
+	&__login {
+		margin-left: 15px;
+		background: $green;
+	}
+
+	&__register {
+		background: $red;
+		margin-left: 7px;
+	}
+
+	&__menu {
+		background: $bg;
+		padding: 25px 0;
+	}
+}
+
+.menu {
+	&__list {
+		display: flex;
+		a {
+			color: #ffffff;
+			text-decoration: none;
+			font-size: 14px;
+		}
+		li {
+			& + li {
+				margin-left: 30px;
+			}
+		}
+	}
+}
