@@ -10,9 +10,11 @@ a {
 	display: block;
 	color: black;
 	cursor: pointer;
+	text-decoration: none;
 }
 button {
 	cursor: pointer;
+	background: #fff;
 }
 ul,
 li {
@@ -20,9 +22,11 @@ li {
 	padding: 0;
 	list-style: none;
 }
+button {
+	border: none;
+}
 body {
 	font-family: "Roboto", sans-serif;
-	font-weight: 500;
 	color: $text;
 }
 
@@ -30,4 +34,20 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+.container-fluid {
+	padding: 0 30px;
+}
+@media (max-width: 720px) {
+	.container-fluid {
+		padding: 0 15px;
+	}
+}
+
+.title {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 60px;
+	color: $bg;
+	padding: 120px 0 40px;
 }
