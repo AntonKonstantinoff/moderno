@@ -156,7 +156,6 @@
 	&__btn-bottom {
 		text-align: center;
 		margin-top: 45px;
-		margin-bottom: 20px;
 		button {
 			font-weight: 400;
 			font-size: 16px;
@@ -232,13 +231,65 @@
 	&__name-autor {
 		margin-right: auto;
 		color: $text;
+		max-width: 245px;
 	}
 
 	&__star {
+		display: flex;
+		align-items: center;
 		span {
 			color: $bg;
+			font-weight: 500;
+		}
+		.star {
+			margin-right: 13px;
 		}
 	}
 }
 
 //end products
+
+//start products-slider
+
+.products-slider {
+	&__title {
+		text-align: center;
+		margin-top: 120px;
+	}
+
+	&__items {
+		text-align: center;
+	}
+
+	.slick-track {
+		display: flex;
+		justify-content: space-between;
+	}
+	.slick-list {
+		overflow: hidden;
+	}
+
+	.slick-dots {
+		text-align: center;
+		padding: 45px 0px 120px;
+		.slick-active button {
+			background: $green;
+		}
+		li {
+			display: inline-block;
+			font-size: 0;
+			margin-left: 3px;
+			margin-right: 3px;
+			button {
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				background-color: rgb(232, 232, 232);
+				outline: none;
+				box-shadow: 0px -1px 1px black;
+			}
+		}
+	}
+}
+
+//end products-slider
