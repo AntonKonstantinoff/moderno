@@ -366,3 +366,51 @@
 }
 
 //end advantage
+
+//start author
+
+.author {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 751px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__inner {
+		display: flex;
+		justify-content: space-around;
+		background: $green;
+		min-height: 220px;
+		max-width: 650px;
+		width: 100%;
+		padding-top: 70px;
+	}
+
+	&__title {
+		color: #fff;
+		font-family: "Roboto-Regular", sans-serif;
+		font-weight: 400;
+		max-width: 262px;
+		font-size: 30px;
+		line-height: 36px;
+		span {
+			font-family: "Roboto-Bold", sans-serif;
+			font-weight: 700;
+		}
+	}
+
+	&__link {
+		font-family: "Roboto-Regular", sans-serif;
+		font-weight: 400;
+		a {
+			font-size: 18px;
+			line-height: 36px;
+			color: $bg;
+			padding: 23px 44px;
+			background: #fff;
+		}
+	}
+}
+
+//end author
