@@ -185,6 +185,9 @@
 		box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
 		border: 1px solid #e7ecf2;
 	}
+	&__images {
+		width: 100%;
+	}
 
 	&__box {
 		display: flex;
@@ -293,3 +296,73 @@
 }
 
 //end products-slider
+
+//start advantage
+
+.advantage {
+	background: $bg;
+	&__inner {
+		padding-bottom: 115px;
+	}
+
+	&__title {
+		color: #fff;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -30px;
+	}
+
+	&__item {
+		text-align: center;
+		&:hover {
+			.advantage__imges {
+				background: $green;
+			}
+			.advantage__item-title {
+				color: $green;
+			}
+			.advantage__imges {
+				g {
+					fill: #fff;
+					transition: all 0.5s;
+				}
+			}
+		}
+	}
+
+	&__imges {
+		margin: 0 auto;
+		border-radius: 50%;
+		width: 114px;
+		height: 114px;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.5s;
+	}
+
+	&__item-title {
+		color: #fff;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 60px;
+		transition: all 0.5s;
+	}
+
+	&__text {
+		font-family: "Roboto-Regular", sans-serif;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 24px;
+		color: $text;
+		max-width: 305px;
+	}
+}
+
+//end advantage
