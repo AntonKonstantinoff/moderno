@@ -25,6 +25,14 @@
 }
 
 @font-face {
+	font-family: "OpenSans-Semibold";
+	src: url("../fonts/OpenSans-SemiBold.woff") format("woff");
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: "icomoon";
 	src: url("../fonts/icomoon.eot");
 	src: url("../fonts/icomoon.eot") format("embedded-opentype"), url("../fonts/icomoon.ttf") format("truetype"),
@@ -50,6 +58,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-envelope-o:before {
+	content: "\f003";
+}
 .icon-map-marker:before {
 	content: "\f041";
 }
@@ -59,8 +70,20 @@
 .icon-phone:before {
 	content: "\f095";
 }
+.icon-bell-o:before {
+	content: "\f0a2";
+}
 .icon-angle-right:before {
 	content: "\f105";
+}
+.icon-angle-down:before {
+	content: "\f107";
+}
+.icon-mail-reply:before {
+	content: "\f112";
+}
+.icon-reply:before {
+	content: "\f112";
 }
 .icon-location-arrow:before {
 	content: "\f124";

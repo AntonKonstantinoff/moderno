@@ -8,7 +8,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin: 25px 0px 15px;
+		padding: 20px 0;
 	}
 
 	&__contacts {
@@ -41,18 +41,334 @@
 	&__login {
 		margin-left: 15px;
 		background: $green;
+		display: none;
 	}
 
 	&__register {
 		background: $red;
 		margin-left: 7px;
+		display: none;
+	}
+	&__logout {
+		background: $red;
 	}
 
 	&__menu {
 		background: $bg;
 		padding: 25px 0;
 	}
+
+	&__circlet {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+		line-height: 24px;
+		color: #a0a0a0;
+		position: relative;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		background-color: #f5f5f5;
+		span {
+			position: absolute;
+			width: 18px;
+			height: 18px;
+			line-height: 17px;
+			color: #fff;
+			font-size: 11px;
+			border-radius: 50%;
+			top: -9px;
+			right: -5px;
+			text-align: center;
+			font-family: "OpenSans-Semibold";
+		}
+	}
+	.notification {
+		span {
+			background-color: #fcb322;
+		}
+	}
+	.mail {
+		margin-left: 15px;
+		span {
+			background-color: #ef6c00;
+		}
+	}
+
+	.basket {
+		margin-left: 15px;
+		span {
+			background-color: $green;
+		}
+	}
+
+	&__user-inner {
+		margin-left: 15px;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			height: 30px;
+			min-width: 158px;
+			bottom: -30px;
+			left: -1px;
+		}
+		&:hover {
+			.header__user-list {
+				height: auto;
+				padding: 25px 20px 29px;
+				border-width: 1px;
+			}
+		}
+	}
+	&__user-list {
+		padding: 0 20px;
+		position: absolute;
+		height: 0;
+		overflow: hidden;
+		background-color: #fff;
+		max-width: 158px;
+		width: 100%;
+		top: 64px;
+		right: 16px;
+		border: 0px solid rgb(204, 204, 204);
+		transition: all 0.5s;
+		a {
+			font-family: "Roboto-Regular", sans-serif;
+			font-weight: 400;
+			color: $text;
+			font-size: 12px;
+		}
+		li {
+			padding-left: 15px;
+			position: relative;
+			& + li {
+				margin-top: 20px;
+			}
+			&::before {
+				content: "\f105";
+				font-family: "icomoon";
+				position: absolute;
+				left: 0;
+				top: -3px;
+				color: $green;
+				font-size: 14px;
+			}
+		}
+	}
+	&__user {
+		display: flex;
+		&-img {
+			margin-right: 12px;
+			border-radius: 50%;
+			height: 34px;
+			width: 34px;
+		}
+		&-box {
+			padding-right: 24px;
+			margin-right: 30px;
+			font-size: 14px;
+			position: relative;
+			.header__box-name {
+				font-weight: 500;
+				color: #222222;
+				margin-bottom: 2px;
+				&::after {
+					content: "\f107";
+					font-family: "icomoon";
+					position: absolute;
+					font-size: 16px;
+					color: #707070;
+					right: 0;
+				}
+			}
+			.header__box-money {
+				color: $green;
+				font-weight: 700;
+			}
+		}
+	}
 }
+
+.header__basket-box,
+.header__mail-box,
+.header__notification-box {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		height: 30px;
+		min-width: 55px;
+		bottom: -30px;
+		right: -8px;
+	}
+	&:hover {
+		.basket__drop,
+		.mail__drop,
+		.notification__drop {
+			height: auto;
+			border: 1px solid rgb(204, 204, 204);
+			padding: 20px 0;
+		}
+		.header__circlet::before {
+			color: $bg;
+		}
+	}
+}
+
+.basket,
+.mail,
+.notification {
+	&__drop {
+		position: absolute;
+		min-width: 268px;
+		background-color: #fff;
+		border: 0px solid rgb(204, 204, 204);
+		height: 0;
+		overflow: hidden;
+		right: -8px;
+		top: 64px;
+		transition: all 0.5s;
+	}
+
+	&__drop-item {
+		display: flex;
+		padding: 0 24px 22px;
+		position: relative;
+		border-bottom: 1px solid rgb(204, 204, 204);
+		&:nth-child(2) {
+			padding-top: 20px;
+		}
+		&:nth-child(3) {
+			padding-top: 20px;
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+		img {
+			margin-right: 16px;
+		}
+	}
+
+	&__content-title {
+		margin-bottom: 5px;
+		font-size: 15px;
+		color: $bg;
+		font-weight: 500;
+	}
+
+	&__content-product {
+		margin-bottom: 5px;
+		color: $green;
+		font-size: 12px;
+	}
+
+	&__content-price {
+		font-weight: 500;
+		color: #000000;
+		font-size: 16px;
+	}
+
+	&__drop-total {
+		padding: 20px 0 0;
+	}
+
+	&__total-price {
+		display: flex;
+		justify-content: space-between;
+		padding: 0px 30px;
+		color: $bg;
+		font-size: 16px;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: space-between;
+		padding: 0px 17px;
+		button {
+			font-weight: 700;
+			font-size: 14px;
+			color: #fff;
+			height: 35px;
+			&:focus {
+				outline-style: none;
+			}
+		}
+	}
+
+	&__btn-cart {
+		background-color: $green;
+		width: 105px;
+	}
+
+	&__btn-checkout {
+		background-color: $red;
+		width: 123px;
+	}
+}
+
+.mail__drop > .basket__drop-item > .basket__content {
+	.basket__content-title,
+	.basket__content-product {
+		margin-bottom: 0;
+	}
+}
+.mail__drop > .basket__drop-item {
+	position: relative;
+	&::after {
+		content: "\f003";
+		font-family: "icomoon";
+		position: absolute;
+		right: 28px;
+		font-size: 16px;
+		color: #b0bec5;
+	}
+	&:hover::after {
+		color: #ef6c00;
+	}
+	&:nth-child(3)::after {
+		content: "\f112";
+		font-family: "icomoon";
+		position: absolute;
+		right: 28px;
+		font-size: 16px;
+		color: #b0bec5;
+	}
+	&:nth-child(3):hover::after {
+		color: #ef6c00;
+	}
+}
+
+.notification__drop > .basket__drop-item {
+	position: relative;
+	&::after {
+		content: "\f0a2";
+		font-family: "icomoon";
+		position: absolute;
+		right: 28px;
+		font-size: 16px;
+		color: #b0bec5;
+	}
+	&:hover::after {
+		color: #ef6c00;
+	}
+}
+.notification__drop > .basket__drop-item > .basket__content {
+	font-weight: 400;
+	.basket__content-title {
+		padding: 2px 0px;
+		color: $green;
+		font-size: 12px;
+	}
+	.basket__content-product {
+		padding: 2px 0px;
+		color: #707070;
+		font-size: 10px;
+	}
+}
+
 .menu {
 	&__list {
 		display: flex;
