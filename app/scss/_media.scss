@@ -108,6 +108,8 @@
 			padding: 15px 15px;
 			text-align: center;
 			margin: 0 auto;
+			width: 100%;
+			justify-content: space-between;
 		}
 	}
 	.notification__drop {
@@ -145,7 +147,7 @@
 		margin-right: 20px;
 	}
 	.basket__drop {
-		left: -16px;
+		left: 0;
 		top: 50px;
 	}
 }
