@@ -1,6 +1,6 @@
-$(function () {
 
-	var mixer = mixitup('.product__items');
+
+$(function () {
 
 	$('.products-slider__items').slick({
 		infinite: true,
@@ -17,4 +17,15 @@ $(function () {
 		readOnly: true
 	});
 
+	$('.header__btn').on('click', function () {
+		$('.menu__list').toggleClass('header__menu-active');
+	});
+
+	$('.header__menu-btn').on('click', function () {
+		$('.header__box').toggleClass('active');
+	});
+
+
+	var mixer = mixitup('.product__items');
 });
+

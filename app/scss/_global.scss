@@ -29,6 +29,12 @@ body {
 	font-family: "Roboto", sans-serif;
 	font-weight: 500;
 	color: $text;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.footer {
+	margin-top: auto;
 }
 
 .container {
@@ -39,6 +45,7 @@ body {
 .container-fluid {
 	padding: 0 30px;
 }
+
 @media (max-width: 720px) {
 	.container-fluid {
 		padding: 0 15px;

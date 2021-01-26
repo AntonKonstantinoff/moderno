@@ -1,0 +1,157 @@
+@media (max-width: 1500px) {
+	.footer__top-inner {
+		flex-wrap: wrap;
+		.footer-company {
+			min-width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (max-width: 950px) {
+	.header__contacts {
+		display: none;
+	}
+	.header__box {
+		margin-left: auto;
+	}
+}
+
+@media (max-width: 770px) {
+	.footer__social {
+		min-width: 100%;
+		margin-top: 30px;
+	}
+	.footer__top-inner {
+		justify-content: start;
+		.footer__column {
+			margin-right: 50px;
+		}
+	}
+	.header__logo {
+		margin-left: 55px;
+	}
+	.header__menu {
+		position: relative;
+		padding: 0;
+	}
+	.menu__list {
+		display: none;
+		position: absolute;
+		text-align: center;
+		z-index: 3;
+		background-color: #000;
+		min-width: 100%;
+		left: 0;
+		top: 0;
+		padding: 15px 0px;
+		li + li {
+			margin-left: 0;
+			margin-top: 10px;
+		}
+	}
+
+	.header__menu-active {
+		display: block;
+		transition: all 0.3s;
+	}
+
+	.header__btn {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		background: $grey;
+		padding-top: 10px;
+		padding-left: 5px;
+		top: -65px;
+		div {
+			width: 30px;
+			height: 2px;
+			top: 5px;
+			left: 5px;
+			background-color: $green;
+		}
+		div + div {
+			margin-top: 7px;
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	.header__menu-btn {
+		display: block;
+		position: absolute;
+		width: 50px;
+		height: 94px;
+		right: 0;
+		top: 0;
+		background-color: $bg;
+		text-align: center;
+		z-index: 5;
+		&::before {
+			position: relative;
+			color: #fff;
+			font-size: 30px;
+			top: 31px;
+		}
+	}
+
+	.header .header__box {
+		display: none;
+		&.active {
+			display: flex;
+			background-color: #fff;
+			border: 1px solid $grey;
+			position: absolute;
+			right: 0;
+			top: 94px;
+			padding: 15px 15px;
+			text-align: center;
+			margin: 0 auto;
+		}
+	}
+	.notification__drop {
+		left: -16px;
+		top: 50px;
+	}
+	.mail__drop {
+		left: 15px;
+		top: 50px;
+	}
+	.basket__drop {
+		left: 12px;
+		top: 50px;
+	}
+	.header__user-list {
+		top: 50px;
+	}
+}
+
+@media (max-width: 550px) {
+	.footer__column {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 430px) {
+	.notification,
+	.mail {
+		display: none;
+	}
+	.header .basket {
+		margin-left: 0;
+	}
+	.header__user-box {
+		margin-right: 20px;
+	}
+	.basket__drop {
+		left: -16px;
+		top: 50px;
+	}
+}
+
+@media (min-width: 770px) {
+	.menu__list {
+		display: flex;
+	}
+}
