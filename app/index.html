@@ -129,7 +129,9 @@
 							</ul>
 						</nav>
 					</div>
-					<div class="header__login header__lk header__lk--on"><a href="#">Login</a></div>
+					<div class="header__login header__lk header__lk--on">
+						<a data-fancybox data-src="#modal" href="javascript:;">Login</a>
+					</div>
 					<div class="header__register header__lk header__lk--on"><a href="#">Register</a></div>
 					<div class="header__logout header__lk header__lk--off"><a href="#">Logout</a></div>
 				</div>
@@ -161,6 +163,23 @@
 		</div>
 		</div>
 	</header>
+
+	<div style="display: none;" id="modal">
+		<div class="login__inner">
+			<div class="login__title">Login</div>
+			<form class="login__form">
+				<label class="login__name">
+					<input type="text" placeholder="Name">
+				</label>
+				<label class="login__password">
+					<input type="password" placeholder="Password">
+				</label>
+				<button type="submit" class="login__submit" required>Submit</button>
+				<button type="submit" class="login__creat" required>Creat An Account?</button>
+				<a class="login__lost" href="#">Lost Password?</a>
+			</form>
+		</div>
+	</div>
 
 	<section class="search" style="background: url(img/bg-search.jpg);">
 		<div class="container">
